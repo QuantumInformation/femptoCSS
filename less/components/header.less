@@ -1,0 +1,117 @@
+@import "./constants";
+
+/*
+The header behaves quite like the bootstrap one I took inspiration from. The class with
+.main-navbar becaomes a hambourger nae for
+*/
+
+header {
+  //height: 60px;
+  background-color: @headerBackground;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ececec;
+  > nav {
+    max-width: @siteWidth;
+    margin: 0 auto;
+    vertical-align: top;
+    padding: 0 @applicationPadding;
+    > .logo {
+      display: inline-block;
+      padding: 9px 0;
+      > a {
+        color: @logoColour !important;
+        text-decoration: none;
+      }
+      h3 {
+        margin: 0;
+      }
+    }
+
+    //mobile 1st
+    #toggleMobileNav {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+    //mobile 1st
+    .account-toggle {
+      position: absolute;
+      top: 15px;
+      right:64px;
+    }
+
+    > ul.main-navbar {
+      margin: 0;
+      padding: 0;
+      > li {
+        display: block;
+        > a {
+          display: block;
+          transition: all 300ms ease;
+          color: @headerText;
+          text-decoration: none;
+          padding: 17px 5px;
+          &:hover {
+            background-color: @headerBackgroundNavHover;
+          }
+        }
+      }
+    }
+
+    @media (max-width: @sm) {
+      > nav {
+        > .logo {
+
+        }
+      }
+    }
+
+    @media (min-width: @sm) {
+      // normal spread out nav
+      > ul.main-navbar {
+        display: inline-block; // so the logo is flexible
+        margin: 0 0 0 20px;
+        vertical-align: top;
+        > li {
+          display: inline-block;
+        }
+      }
+
+      .account-toggle {
+        right:15px;
+      }
+    }
+
+    .account-info {
+      position: absolute;
+      border: 1px solid @borderColour;
+      background-color: @bodyBackground;
+      width: 200px;
+      right: 5px;
+      padding: 8px;
+      top: 50px;
+      color: @basicText;
+      border-radius: 5px;
+    }
+  }
+
+  button.mobileDropdown {
+    box-sizing: border-box;
+    font-size: 22px;
+    padding: 5px 15px;
+    background-color: transparent;
+    color: #346F9F;
+    border: 1px solid transparent;
+    transition: all 300ms ease;
+    outline: none;
+
+    &:hover {
+      background-color: initial;
+      border: 1px solid white;
+    }
+  }
+}
+
+

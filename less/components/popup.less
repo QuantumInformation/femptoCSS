@@ -1,0 +1,52 @@
+@import "../constants";
+
+/*
+This will be added to the screen at the far right and as soon as it is displayed we transition it
+into view
+*/
+@formPadding: 50px;
+@popupWidth: 250px;
+
+[data-componenent="popup"] {
+  z-index: 2;
+  padding: 30px 10px 10px 10px;
+  width: 250px;
+  position: fixed;
+  left: calc(50% - (@popupWidth / 2));
+  opacity: 0.98;
+  font-size: 13px;
+  top: @formPadding;
+  box-sizing: border-box;
+
+  /*  left: @formPadding;
+    right: @formPadding;
+    bottom: @formPadding;*/
+
+  transition: all 300ms ease;
+  background-color: #06071a;
+  border: 1px solid #04bbff;
+  border-radius: 4px;
+  &[data-is-initialising="true"] {
+    //todo cater for bigger screens
+    left: -@popupWidth !important;
+  }
+  &[data-is-destructing="true"] {
+    //todo cater for bigger screens
+    left: 100%;
+  }
+  > a {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+  }
+  > .subtitle {
+    color: #55595c;
+  }
+  .closeDialogue {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+//todo mobile styles

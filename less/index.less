@@ -1,0 +1,64 @@
+/*the common stuff */
+@import "constants";
+@import "mediaQueryClasses";
+@import "./components/header";
+@import "./components/messageWindow";
+@import "forms";
+@import "./components/modalBackground";
+@import "./components/popup";
+
+/*@font-face {
+  font-family: ubuntu;
+  src: url(../assets/fonts/ubuntu-font-family-0.83/Ubuntu-R.ttf);
+}*/
+
+
+body {
+  //  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  //font-family: ubuntu,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: @minSiteWidth;
+  color: @basicText;
+  background-color: @bodyBackground;
+}
+
+a{
+  color: @linkColour;
+}
+#container {
+  flex: 1;
+  background-color: #1a1a1a;
+}
+
+#main-container {
+  margin: 60px auto 20px auto;
+  max-width: @siteWidth;
+  padding: 0 @applicationPadding;
+  overflow: hidden;
+  h2, h3, h4 {
+    text-align: center;
+    color: white;
+  }
+}
+
+footer {
+  padding: 10px 0;
+  background-color: #1d2734;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  > div {
+    margin: 0 auto;
+    max-width: @siteWidth;
+    padding: 0 @applicationPadding;
+  }
+}
+
+@media (max-width: @sm) {
+  footer {
+    position: static;
+  }
+}

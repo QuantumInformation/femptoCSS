@@ -1,0 +1,24 @@
+{
+  "name": "femptoCSS",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "lessc less/index.less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuantumInformation/femptoCSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuantumInformation/femptoCSS/issues"
+  },
+  "homepage": "https://github.com/QuantumInformation/femptoCSS#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "normalize.css": "^4.2.0"
+  }
+}
