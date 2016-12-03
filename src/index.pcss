@@ -1,0 +1,61 @@
+@import "./generic_styles/constants.pcss";
+@import "./generic_styles/mediaQueryClasses.pcss";
+@import "./components/header.pcss";
+@import "./components/messageWindow.pcss";
+@import "./generic_styles/forms.pcss";
+@import "./components/modalBackground.pcss";
+@import "./components/popup.pcss";
+
+/*@font-face {
+  font-family: ubuntu;
+  src: url(../assets/fonts/ubuntu-font-family-0.83/Ubuntu-R.ttf);
+}*/
+
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: var(--min-site-width);
+  color: var(--basic-text);
+  background-color: var(--body-background);
+}
+
+a{
+  color: var(--link-colour);
+}
+#container {
+  flex: 1;
+  background-color: #1a1a1a;
+}
+
+#main-container {
+  margin: 60px auto 20px auto;
+  max-width: var(--site-width);
+  padding: 0 var(--application-padding);
+  overflow: hidden;
+  h2, h3, h4 {
+    text-align: center;
+    color: white;
+  }
+}
+
+footer {
+  padding: 10px 0;
+  background-color: #1d2734;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  > div {
+    margin: 0 auto;
+    max-width: var(--site-width);
+    padding: 0 0 var(--application-padding);
+  }
+}
+
+@media (max-width: var(--sm)) {
+  footer {
+    position: static;
+  }
+}

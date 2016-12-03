@@ -1,11 +1,13 @@
-@media (min-width: @sm) {
+@import './constants.pcss';
+
+@media (min-width: var(--sm)) {
   .hidden-sm-up { // hidden from small size and above
     display: none;
   }
 
 }
 
-@media (max-width: @sm ) {
+@media (max-width:  var(--sm)) {
   .hidden-sm-down { // hide anything up to small size
     display: none;
   }

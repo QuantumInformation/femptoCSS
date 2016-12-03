@@ -1,4 +1,4 @@
-@import "../constants";
+@import "../generic_styles/constants.pcss";
 
 #messageWindow {
   font-family: 'Droid Sans Mono', monospace;
@@ -35,13 +35,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    color: @linkColour;
+    color: var(--link-colour);
     font-size: 8px;
     content: "📶  listing for new messages..";
   }
 }
 
-@media (max-width: @sm) {
+@media (max-width: var(--sm)) {
   #messageWindow {
     &[data-minimised="true"] {
       width: 50px;

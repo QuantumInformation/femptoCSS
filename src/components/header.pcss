@@ -1,4 +1,4 @@
-@import "./constants";
+@import "../generic_styles/constants.pcss";
 
 /*
 The header behaves quite like the bootstrap one I took inspiration from. The class with
@@ -7,21 +7,21 @@ The header behaves quite like the bootstrap one I took inspiration from. The cla
 
 header {
   //height: 60px;
-  background-color: @headerBackground;
+  background-color: var(--header-background);
   position: fixed;
   top: 0;
   width: 100%;
   color: #ececec;
   > nav {
-    max-width: @siteWidth;
+    max-width: var(--site-width);
     margin: 0 auto;
     vertical-align: top;
-    padding: 0 @applicationPadding;
+    padding: 0 var(--application-padding);
     > .logo {
       display: inline-block;
       padding: 9px 0;
       > a {
-        color: @logoColour !important;
+        color: var(--logo-colour) !important;
         text-decoration: none;
       }
       h3 {
@@ -34,6 +34,7 @@ header {
       position: absolute;
       top: 5px;
       right: 5px;
+      background-color: transparent;
     }
     //mobile 1st
     .account-toggle {
@@ -50,28 +51,21 @@ header {
         > a {
           display: block;
           transition: all 300ms ease;
-          color: @headerText;
+          color: var(--header-text);
           text-decoration: none;
           padding: 17px 5px;
           &:hover {
-            background-color: @headerBackgroundNavHover;
+            background-color: var(--header-hover);
           }
         }
       }
     }
 
-    @media (max-width: @sm) {
-      > nav {
-        > .logo {
 
-        }
-      }
-    }
-
-    @media (min-width: @sm) {
-      // normal spread out nav
+    @media (min-width: var(--sm) ){
+      /* normal spread out nav*/
       > ul.main-navbar {
-        display: inline-block; // so the logo is flexible
+        display: inline-block; /* so the logo is flexible*/
         margin: 0 0 0 20px;
         vertical-align: top;
         > li {
@@ -86,13 +80,13 @@ header {
 
     .account-info {
       position: absolute;
-      border: 1px solid @borderColour;
-      background-color: @bodyBackground;
+      border: 1px solid var(--border-colour);
+      background-color: var(--body-background);
       width: 200px;
       right: 5px;
       padding: 8px;
       top: 50px;
-      color: @basicText;
+      color: var(--basic-text);
       border-radius: 5px;
     }
   }
