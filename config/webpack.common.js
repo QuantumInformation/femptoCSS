@@ -27,22 +27,19 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader'
       },
-      {
-        test: /\.pcss$/,
-        loaders: [
-          'style-loader',
-          'css-loader?importLoaders=1',
-          'postcss-loader'
-        ]
 
-      },
       {
-        test: /\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.pcss$/, loader: ExtractTextPlugin.extract({
+        loader: "postcss-loader"
+      })
+      }
 
+      ,
+      {
+        test: /\.css$/, loader: ExtractTextPlugin.extract({
+        fallbackLoader: "style-loader",
+        loader: "css-loader"
+      })
       }
     ]
   },
